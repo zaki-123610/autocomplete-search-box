@@ -2,7 +2,7 @@
 
 A client-side country search with autocomplete, built for the GDG Algiers frontend challenge in vanilla HTML, CSS and JavaScript. The matching algorithm is hand-written: no search library and no framework.
 
-**Live demo:** https://YOUR-USERNAME.github.io/autocomplete-search-box/ <!-- replace after deploying -->
+**Live demo:** https://zaki-123610.github.io/autocomplete-search-box/ <!-- replace after deploying -->
 
 ## Features
 
