@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Instant, accent-insensitive country search with autocomplete, built with vanilla HTML, CSS and JavaScript.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fcf9f2">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#110f0c">
+  <title>Country Search</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232b7880'/%3E%3Ccircle cx='29' cy='29' r='13' fill='none' stroke='white' stroke-width='6'/%3E%3Cpath d='m39 39 9 9' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@400;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="intro">
+      <h1 class="intro__title">Find a country</h1>
+      <p class="intro__text">Search <span id="country-count">110</span> countries as you type. Accents, apostrophes, hyphens and capitals are optional.</p>
+    </header>
+
+    <div class="search">
+      <label class="search__label" for="search-input">Country</label>
+      <div class="search__field">
+        <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="m20 20-3.6-3.6"/>
+        </svg>
+        <input
+          id="search-input"
+          class="search__input"
+          type="text"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-controls="search-listbox"
+          autocomplete="off"
+          autocapitalize="off"
+          autocorrect="off"
+          spellcheck="false"
+          placeholder="Try “land”, “cote divoire” or “sao tome”">
+        <button type="button" class="search__clear" aria-label="Clear search" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M7 7l10 10M17 7 7 17"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="search__popup" id="search-popup" hidden>
+        <ul class="search__list" id="search-listbox" role="listbox" aria-label="Country suggestions"></ul>
+        <p class="search__more" id="search-more" hidden></p>
+        <p class="search__empty" id="search-empty" hidden></p>
+      </div>
+    </div>
+
+    <p class="visually-hidden" id="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
+  </main>
+</body>
+</html>
