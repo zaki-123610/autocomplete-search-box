@@ -1,0 +1,8 @@
+{
+  "name": "autocomplete-search-box",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
